@@ -1,11 +1,12 @@
-package FinalProject;
+
 
 import java.util.*;
 import java.util.Scanner;
 /**
  * @author Terry, Josh, John
  * @date 11/19/2022
- * @version 1.0
+ * @version 1.01
+ * @changes Added method to print out tasks and the points those tasks are worth.
  */
 public class habitProjectMain
 {
@@ -17,7 +18,7 @@ public class habitProjectMain
     static int mediumPoints = 10;
     static int easyPoints = 5;
     static int sumPoints = 0;
-    static HashMap<String, Integer> testMap = new HashMap<String, Integer>();
+    static HashMap<String, Integer> pointMap = new HashMap<String, Integer>();
 
 
 
