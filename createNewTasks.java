@@ -1,4 +1,4 @@
-package FinalProject;
+
 import java.util.*;
 import java.util.Scanner;
 
@@ -25,15 +25,15 @@ public class createNewTasks extends habitProjectMain{
                     int difInput = kb2.nextInt();
                     switch(difInput) {
                         case 1:
-                            testMap.put(task, easyPoints);
+                            pointMap.put(task, easyPoints);
                             break;
 
                         case 2:
-                            testMap.put(task, mediumPoints);
+                            pointMap.put(task, mediumPoints);
                             break;
 
                         case 3:
-                            testMap.put(task, hardPoints);
+                            pointMap.put(task, hardPoints);
                             break;
                     }
         }
@@ -41,10 +41,16 @@ public class createNewTasks extends habitProjectMain{
     }
 
     //This method allows the user to see the amount of points each of their tasks are based on their difficulty
-    public static void taskNameandPoints()
+    public static void taskNameAndPoints()
     {
-        for (int i =0; i< taskList.size(); i++) {
-
+        if(taskList.size() == 0){
+            System.out.println("No Tasks Found.");
+        }else {
+            for (String s : taskList) {
+                System.out.println("Task Name: " + s);
+                System.out.println("Point Worth: " + pointMap.get(s));
+                System.out.println("");
+            }
         }
     }
 }
