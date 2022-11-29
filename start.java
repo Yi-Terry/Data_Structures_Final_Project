@@ -1,4 +1,4 @@
-package FinalProject;
+package finalProject;
 
 import java.util.Scanner;
 
@@ -23,15 +23,18 @@ public class start extends habitProjectMain{
                 case 2:
                     System.out.println("The following tasks were recorded:");
                     System.out.println(taskList);
-                    createNewTasks.taskNameandPoints();
+                    createNewTasks.taskNameAndPoints();
                     break;
                     //Checks total amount of points
                 case 3:
-                    System.out.println("Test 3");
+                   pointStatus.currentPoints();
+
+
                     break;
                     //allows user to remove tasks that have been completed
                 case 4:
                     System.out.println("test 4");
+                    checkOff.checkOffList();
 
                 default:
                     System.out.println("Error");
