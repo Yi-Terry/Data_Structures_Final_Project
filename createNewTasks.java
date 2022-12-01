@@ -1,3 +1,4 @@
+package finalProject;
 
 import java.util.*;
 import java.util.Scanner;
@@ -9,7 +10,7 @@ public class createNewTasks extends habitProjectMain{
 
         Scanner kb2 = new Scanner(System.in);
         System.out.println("How many tasks would you like to create?");
-        int input = Integer.parseInt(kb2.nextLine());
+        int input = kb2.nextInt();
 
 
         for(int i = 1; i <= input; i++)
@@ -17,21 +18,24 @@ public class createNewTasks extends habitProjectMain{
             //Asks user to enter a task
             //adds to the arraylist
             System.out.println("Please enter in task "+i);
-                String task = kb2.nextLine();
+                String task = kb2.next();
                 taskList.add(task);
-
+                q1.add(task);
+               s1.push(task);
+////////////////////////////////////////////////////////////////////////////////
 
                 //Asks for the difficultly of the task
             System.out.println("How difficult is this task? \n 1. Easy \n 2. Medium \n 3. Hard");
-                    int difInput = Integer.parseInt(kb2.nextLine());
+                    int difInput = kb2.nextInt();
             switch (difInput) {
                 case 1 -> pointMap.put(task, easyPoints);
                 case 2 -> pointMap.put(task, mediumPoints);
                 case 3 -> pointMap.put(task, hardPoints);
                 default -> System.out.println("Error. Please, enter a correct number.");
+
             }
         }
-//
+
 
         System.out.println(taskList);
     }
