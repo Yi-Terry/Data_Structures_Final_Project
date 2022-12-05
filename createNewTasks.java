@@ -28,11 +28,19 @@ public class createNewTasks extends habitProjectMain{
             System.out.println("How difficult is this task? \n 1. Easy \n 2. Medium \n 3. Hard");
                     int difInput = kb2.nextInt();
             switch (difInput) {
-                case 1 -> pointMap.put(task, easyPoints);
-                case 2 -> pointMap.put(task, mediumPoints);
-                case 3 -> pointMap.put(task, hardPoints);
-                default -> System.out.println("Error. Please, enter a correct number.");
+                case 1:
+                    pointMap.put(task, easyPoints);
+                    break;
 
+                case 2:
+                    pointMap.put(task, mediumPoints);
+                    break;
+                case 3 :
+                    pointMap.put(task, hardPoints);
+                    break;
+                default :
+                    System.out.println("Error. Please, enter a correct number.");
+                    break;
             }
         }
 

@@ -21,7 +21,7 @@ public class habitProjectMain
 {
     //Arraylist(task list), points
 
-    static ArrayList<String> taskList = new ArrayList<String>();
+  static ArrayList<String> taskList = new ArrayList<String>();
     Scanner kb1 = new Scanner(System.in);
     static int hardPoints = 20;
     static int mediumPoints = 10;
@@ -32,6 +32,7 @@ public class habitProjectMain
     static Queue<String> q1 = new LinkedList<String>();
 
     static Stack<String> s1 = new Stack<String>();
+    static Stack<String> s2 = new Stack<String>();
 
 //setters and getters
     public static ArrayList<String> getTaskList() {
@@ -116,7 +117,7 @@ public class habitProjectMain
 
     public static void main(String[] args) {
 
-       start.choose();
+        start.choose();
 
 
         /////////////////////////////////////////////////////////

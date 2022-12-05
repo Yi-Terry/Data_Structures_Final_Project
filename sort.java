@@ -1,7 +1,7 @@
 package finalProject;
 
 public class sort extends habitProjectMain {
-
+    static int k =1;
 //
 //    public static void bubbleSort(String taskList) {
 //        int n = taskList.length();
@@ -19,24 +19,38 @@ public class sort extends habitProjectMain {
 //    }
     
 
-
+/** prints the tasks list in first to last order entered*/
     public static void firstLast()
     {
-        System.out.println(q1.size());
-        System.out.println(getQ1());
-        for(int i = 1; i <= q1.size(); i++)
-        {
-            System.out.println(i+". "+q1.poll());
-        }
+        while( k <= q1.size())
+{
+    System.out.println("-"+q1.poll());
 
+
+}
 
     }
-
+/** prints the task list in last to first order entered*/
     public static void lastFirst()
     {
         for(int j = s1.size(); j>0; j--)
         {
-            System.out.println(j+". "+s1.pop());
+            if(!s1.isEmpty()) {
+                s2.addElement(s1.peek());
+                System.out.println("-" + s1.pop());
+
+            }
+
+            else if(s1.isEmpty())
+            {
+                s1.addElement(s2.peek());
+                System.out.println("-" + s2.pop());
+
+            }
+
+
         }
+
+
     }
 }
