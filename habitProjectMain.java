@@ -1,4 +1,4 @@
-package finalProject;
+//package finalProject;
 
 import java.util.*;
 import java.util.Scanner;
@@ -28,11 +28,14 @@ public class habitProjectMain
     static int easyPoints = 5;
     static int sumPoints = 0;
     static HashMap<String, Integer> pointMap = new HashMap<String, Integer>();
+    static ArrayList<String> databaseList = new ArrayList<>();
 
     static Queue<String> q1 = new LinkedList<String>();
 
     static Stack<String> s1 = new Stack<String>();
     static Stack<String> s2 = new Stack<String>();
+
+    static BTStrings bt = new BTStrings();
 
 //setters and getters
     public static ArrayList<String> getTaskList() {

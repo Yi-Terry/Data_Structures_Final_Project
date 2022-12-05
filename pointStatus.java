@@ -1,4 +1,4 @@
-package finalProject;
+//package finalProject;
 
 public class pointStatus extends habitProjectMain
 {
