@@ -1,4 +1,4 @@
-package finalProject;
+
 
 import java.util.*;
 import java.util.Scanner;
@@ -26,13 +26,14 @@ public class habitProjectMain
     static int hardPoints = 20;
     static int mediumPoints = 10;
     static int easyPoints = 5;
-    static int sumPoints = 0;
+    static int sumPoints = 20;
     static int lvl1 = 1;
     static int lvl2 = 10;
     static int lvl3 = 20;
     static int lvl4 = 30;
     static int lvl5 = 40;
     static int lvl6 = 50;
+
 
     static HashMap<String, Integer> pointMap = new HashMap<String, Integer>();
     static ArrayList<String> databaseList = new ArrayList<>();
