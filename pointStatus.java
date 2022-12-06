@@ -2,7 +2,7 @@
 
 public class pointStatus extends habitProjectMain
 {
-
+//
 
     public static void currentPoints(){
 
