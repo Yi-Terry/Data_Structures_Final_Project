@@ -1,7 +1,6 @@
-//package finalProject;
-import java.util.Scanner;
+package finalProject;
 
-//Hello there
+import java.util.Scanner;
 
 //start of the task program
 public class start extends habitProjectMain{
@@ -9,7 +8,8 @@ public class start extends habitProjectMain{
     public static void choose() {
         Scanner kb = new Scanner(System.in);
         System.out.println("Welcome to the Task System. What would you like to do?");
-        System.out.println("1-Add Tasks \n2-Check Existing Tasks \n3-Check Point Status \n4-Check off \n5-first to last \n6-last to first\n7-Access the activity database");
+        System.out.println("1-Add Tasks \n2-Check Existing Tasks \n3-Check Point Status \n4-Check off " +
+                "\n5-first to last \n6-last to first\n7-Access the activity database \n8-Check current level");
         int userChoice = kb.nextInt();
         boolean run = false;
         while (!run) {
@@ -56,9 +56,9 @@ public class start extends habitProjectMain{
                     }
                     bt.inorder();
                     break;
-
-                case 9:
-
+                case 8:
+                    pointStatus.currentLevel();
+                    break;
 
                 default:
                     System.out.println("Error");

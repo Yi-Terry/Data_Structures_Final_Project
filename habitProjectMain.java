@@ -1,4 +1,4 @@
-//package finalProject;
+package finalProject;
 
 import java.util.*;
 import java.util.Scanner;
@@ -8,8 +8,6 @@ import java.util.Scanner;
  * @version 1.01
  * @changes Added method to print out tasks and the points those tasks are worth.
  */
-
-//hello
 
     /*
     -use binary tree to recommend user new tasks to try and add into the list. Also, show the amount of points that task costs.
@@ -29,6 +27,13 @@ public class habitProjectMain
     static int mediumPoints = 10;
     static int easyPoints = 5;
     static int sumPoints = 0;
+    static int lvl1 = 1;
+    static int lvl2 = 10;
+    static int lvl3 = 20;
+    static int lvl4 = 30;
+    static int lvl5 = 40;
+    static int lvl6 = 50;
+
     static HashMap<String, Integer> pointMap = new HashMap<String, Integer>();
     static ArrayList<String> databaseList = new ArrayList<>();
 
@@ -40,7 +45,7 @@ public class habitProjectMain
     static BTStrings bt = new BTStrings();
 
 //setters and getters
-    public static ArrayList<String> getTaskList() {
+    public static ArrayList<String> getTaskList(int i) {
         return taskList;
     }
 
