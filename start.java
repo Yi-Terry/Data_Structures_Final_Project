@@ -6,9 +6,12 @@ public class start extends habitProjectMain{
 
     public static void choose() {
         Scanner kb = new Scanner(System.in);
-        System.out.println("Welcome to the Task System. What would you like to do?");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("What would you like to do?");
         System.out.println("1-Add Tasks \n2-Check Existing Tasks \n3-Check Point Status \n4-Check off " +
                 "\n5-first to last \n6-last to first\n7-Access the activity database \n8-Check current level");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+
         int userChoice = kb.nextInt();
         boolean run = false;
         while (!run) {
@@ -54,6 +57,16 @@ public class start extends habitProjectMain{
                         bt.insert(s);
                     }
                     bt.inorder();
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+                    System.out.println("Ok so the list is sorted but IDK how to associate the number with the correct task.");
+                    System.out.println("Printing sorted difficulties");
+                    int n = difficultyList.size();
+                    sort.sortStrings(difficultyList,n);
+                    System.out.println(difficultyList);
+
+
                     break;
                 case 8:
                     pointStatus.currentLevel();
