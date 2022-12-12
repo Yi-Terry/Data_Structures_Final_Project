@@ -1,5 +1,6 @@
 //package finalProject;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.Scanner;
 /**
@@ -34,15 +35,14 @@ public class habitProjectMain
     static int lvl5 = 40;
     static int lvl6 = 50;
 
+    static ArrayList<String>difficultyList = new ArrayList<>();
     static HashMap<String, Integer> pointMap = new HashMap<String, Integer>();
-    static ArrayList<String> databaseList = new ArrayList<>();
-
+    static ArrayList<String>databaseList =new ArrayList<>();
+    static BTStrings bt = new BTStrings();
     static Queue<String> q1 = new LinkedList<String>();
 
     static Stack<String> s1 = new Stack<String>();
     static Stack<String> s2 = new Stack<String>();
-
-    static BTStrings bt = new BTStrings();
 
 //setters and getters
     public static ArrayList<String> getTaskList(int i) {
@@ -126,7 +126,18 @@ public class habitProjectMain
 */
 
     public static void main(String[] args) {
-
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("\n" +
+                " __          __  _                            _          _    _       _     _ _     _______             _             \n" +
+                " \\ \\        / / | |                          | |        | |  | |     | |   (_) |   |__   __|           | |            \n" +
+                "  \\ \\  /\\  / /__| | ___ ___  _ __ ___   ___  | |_ ___   | |__| | __ _| |__  _| |_     | |_ __ __ _  ___| | _____ _ __ \n" +
+                "   \\ \\/  \\/ / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ | __/ _ \\  |  __  |/ _` | '_ \\| | __|    | | '__/ _` |/ __| |/ / _ \\ '__|\n" +
+                "    \\  /\\  /  __/ | (_| (_) | | | | | |  __/ | || (_) | | |  | | (_| | |_) | | |_     | | | | (_| | (__|   <  __/ |   \n" +
+                "     \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___|  \\__\\___/  |_|  |_|\\__,_|_.__/|_|\\__|    |_|_|  \\__,_|\\___|_|\\_\\___|_|   \n" +
+                "                                                                                                                      " +
+                "                                                                                                                      ");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("LOADING...........");
         start.choose();
 
 
