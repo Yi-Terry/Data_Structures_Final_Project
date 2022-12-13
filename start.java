@@ -63,7 +63,7 @@ public class start extends habitProjectMain{
                     System.out.println("Ok so the list is sorted but IDK how to associate the number with the correct task.");
                     System.out.println("Printing sorted difficulties");
                     int n = difficultyList.size();
-                    sort.sortStrings(difficultyList,n);
+//                    sort.sortStrings(difficultyList,n);
                     System.out.println(difficultyList);
 
 

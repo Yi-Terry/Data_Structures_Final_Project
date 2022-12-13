@@ -27,7 +27,7 @@ public class habitProjectMain
     static int hardPoints = 20;
     static int mediumPoints = 10;
     static int easyPoints = 5;
-    static int sumPoints = 0;
+    static int sumPoints = 1;
     static int lvl1 = 1;
     static int lvl2 = 10;
     static int lvl3 = 20;

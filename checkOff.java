@@ -1,34 +1,56 @@
 //package finalProject;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class checkOff extends habitProjectMain {
 
 
     public static void checkOffList() {
-            int i;
-        for( i = 1; i <= taskList.size(); i++)
-        {
-            System.out.println(i+". "+ taskList.get(i));
-        }
-
 
         Scanner kb3 = new Scanner(System.in);
 
-        System.out.println("Please choose a task you would like to check off. \n" +
-                taskList);
-        int checkOffInput = kb3.nextInt();
+        System.out.println(taskList);
 
-        if (i == checkOffInput) {
-            System.out.println("Checking off list item " + i);
-            taskList.remove(i);
-            q1.remove(i);
+        System.out.println("choose a task you would like to remove.");
+
+        String ans = kb3.nextLine();
 
 
-        } else {
-            System.out.println("error, this task does not exist \n" +
-                    "Please choose a task that is in your list.");
-            checkOffList();
+        for (int i = 0; i < taskList.size(); i++) {
+
+            if(!ans.equals(taskList.get(i)))
+            {
+                System.out.println("Please choose a task that belongs in your list.");
+                checkOffList();
+            }
+
+
+            else if(ans.equals(taskList.get(0)))
+            {
+                taskList.remove(0);
+                System.out.println("Task has been completed!");
+            }
+
+            else if (ans.equals(taskList.get(i))) {
+                taskList.remove(i);
+                System.out.println("Task has been completed!");
+
+            }
+            }
+
+        if (taskList.isEmpty()) {
+            System.out.println("You have completed all of your tasks! \n" +
+                    "Add more!");
+
+
         }
     }
-    }
+}
+
+
+
+
+
+
+
