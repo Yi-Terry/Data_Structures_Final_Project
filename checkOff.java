@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class checkOff extends habitProjectMain {
 
-
+//
     public static void checkOffList() {
 
         Scanner kb3 = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class checkOff extends habitProjectMain {
             {
                 taskList.remove(0);
                 sumPoints += pointMap.get(ans);
-                System.out.println("Testing points:");
+                System.out.println("Adding points");
                 System.out.println(sumPoints);
                 System.out.println("Task has been completed!");
             }
