@@ -1,5 +1,7 @@
 //package finalProject;
 
+import java.util.ArrayList;
+
 public class sort extends habitProjectMain {
     static int k =1;
 //
@@ -51,6 +53,21 @@ public class sort extends habitProjectMain {
 
         }
 
+
+    }
+
+
+    public static void sortStrings(ArrayList<String> arr, int n){
+        String temp;
+        for(int i =0; i < n-1; i++){
+            for(int j =i+1; j<n;j++){
+                if(arr.get(i).compareTo(arr.get(j))>0){
+                    temp = arr.get(i);
+                    arr.set(i, arr.get(j));
+                    arr.set(j, temp);
+                }
+            }
+        }
 
     }
 }
