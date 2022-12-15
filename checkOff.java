@@ -30,7 +30,7 @@ public class checkOff extends habitProjectMain {
             else if (ans.equals(taskList.get(i))) {
                 taskList.remove(i);
                 sumPoints += pointMap.get(ans);
-                System.out.println("Testing points:");
+                System.out.println("Total points:");
                 System.out.println(sumPoints);
                 System.out.println("Task has been completed!");
 
