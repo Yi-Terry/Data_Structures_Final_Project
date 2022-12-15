@@ -45,5 +45,22 @@ public class BTStrings {
             inorder(r.getRight());
         }
     }
+    public int countNodes()
+    {
+        return countNodes(rootNode);
+    }
+    /* Function to count number of nodes recursively */
+    private int countNodes(BtNode r)
+    {
+        if (r == null)
+            return 0;
+        else
+        {
+            int l = 1;
+            l += countNodes(r.getLeft());
+            l += countNodes(r.getRight());
+            return l;
+        }
+    }
 
 }
