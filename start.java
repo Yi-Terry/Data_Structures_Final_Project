@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //start of the task program
@@ -53,21 +54,44 @@ public class start extends habitProjectMain{
                     break;
                 //Allows user to access database of activities
                 case 7:
-                    System.out.println("Fetching Database...");
-                    readFile.readDatabase();
-                    for(String s: databaseList){
-                        bt.insert(s);
-                    }
-                    bt.inorder();
-                    System.out.println();
-                    System.out.println();
-                    System.out.println();
-                    System.out.println("Ok so the list is sorted but IDK how to associate the number with the correct task.");
-                    System.out.println("Printing sorted difficulties");
-                    int n = difficultyList.size();
-//                    sort.sortStrings(difficultyList,n);
-                    System.out.println(difficultyList);
 
+                    System.out.println("Database Options: \n1-Access database\n2-Access database based on difficulty");
+                    int input = kb.nextInt();
+
+                    if(input == 1) {
+                        if(bt.countNodes()<1) {
+//                            readFile.readDatabase();
+                            for (String s : databaseList) {
+                                bt.insert(s);
+                            }
+                            bt.inorder();
+                            System.out.println("Total Items: "+bt.countNodes());
+                        }else if(bt.countNodes()>0) {
+                            System.out.println("Fetching Database...");
+                            bt.inorder();
+                            System.out.println(bt.countNodes());
+                        }
+                    }else if(input ==2) {
+                        if(list2.isEmpty()) {
+
+                            System.out.println("Printing sorted tasks from increasing difficulty");
+                            list1.addAll(databaseList);
+                            list2.addAll(difficultyList);
+                            int n = difficultyList.size();
+                            sort.runStringSort(list2, list1, n);
+                            for (String z : list1) {
+                                System.out.printf("%s\n", z);
+                            }
+                        }
+                        else {
+                            for(String r: list1){
+                                System.out.printf("%s\n", r);
+                            }
+                        }
+                    }
+                    else{
+                        System.out.println("Error. Please enter appropriate number");
+                    }
 
                     break;
                 case 8:
@@ -94,4 +118,6 @@ public class start extends habitProjectMain{
                 }
             }
         }
+
+
     }
