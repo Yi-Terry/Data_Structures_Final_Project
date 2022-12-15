@@ -57,17 +57,26 @@ public class sort extends habitProjectMain {
     }
 
 
-    public static void sortStrings(ArrayList<String> arr, int n){
+    public static void sortStrings(ArrayList<String> arr, int n, ArrayList<String>arr2){
         String temp;
+        String temp2;
         for(int i =0; i < n-1; i++){
             for(int j =i+1; j<n;j++){
                 if(arr.get(i).compareTo(arr.get(j))>0){
                     temp = arr.get(i);
+                    temp2 = arr2.get(i);
                     arr.set(i, arr.get(j));
+                    arr2.set(i, arr2.get(j));
                     arr.set(j, temp);
+                    arr2.set(j,temp2);
                 }
             }
         }
 
+    }
+
+
+    public static void runStringSort(ArrayList<String> arr1, ArrayList<String>arr2, int size){
+        sort.sortStrings(arr1, size,arr2);
     }
 }
