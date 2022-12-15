@@ -21,7 +21,8 @@ import java.util.Scanner;
 public class habitProjectMain
 {
     //Arraylist(task list), points
-
+    static ArrayList<String>list1 =new ArrayList<>();
+    static ArrayList<String>list2 =new ArrayList<>();
   static ArrayList<String> taskList = new ArrayList<String>();
     Scanner kb1 = new Scanner(System.in);
     static int hardPoints = 20;
@@ -40,7 +41,6 @@ public class habitProjectMain
     static ArrayList<String>databaseList =new ArrayList<>();
     static BTStrings bt = new BTStrings();
     static Queue<String> q1 = new LinkedList<String>();
-
     static Stack<String> s1 = new Stack<String>();
     static Stack<String> s2 = new Stack<String>();
 
@@ -138,6 +138,7 @@ public class habitProjectMain
                 "                                                                                                                      ");
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("LOADING...........");
+        readFile.readDatabase();
         start.choose();
 
 
