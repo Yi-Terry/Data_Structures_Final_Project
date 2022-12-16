@@ -7,23 +7,26 @@ import java.util.Scanner;
  * @author Terry, Josh, John
  * @date 11/19/2022
  * @version 1.01
- * @changes Added method to print out tasks and the points those tasks are worth.
+ *
  */
 
     /*
-    -use binary tree to recommend user new tasks to try and add into the list. Also, show the amount of points that task costs.
-    -stack queue and bubble sort. Sort data based on the order the user adds it in by.
-    -sort recommended tasks from data file into easy-hard order.
-    -save all tasks into a file so that it can be brought back up when the program is loaded again
-    -use queue to order the lst from first to last input
-    -use stack to order the list from last to first input
+    THINGS TO FIX
+    -If the user enters a number other than 1,2, or 3 for the task, it will return null and break the program if the
+    user tries to check it off
+    -When choosing cases 5 and 6 and the habit list is empty, the program will say it will print out the list but then
+    prints nothing
+    -If the user decides to check their points but havent checked off anything, it will say they have 1 point
+    -Points do not do anything yet
 */
 public class habitProjectMain
 {
     //Arraylist(task list), points
     static ArrayList<String>list1 =new ArrayList<>();
     static ArrayList<String>list2 =new ArrayList<>();
-  static ArrayList<String> taskList = new ArrayList<String>();
+    static ArrayList<String> taskList = new ArrayList<String>();
+    static ArrayList<String> quotes = new ArrayList<>();
+    static ArrayList<String> authorOfQuote = new ArrayList<>();
     Scanner kb1 = new Scanner(System.in);
     static int hardPoints = 20;
     static int mediumPoints = 10;
@@ -43,6 +46,7 @@ public class habitProjectMain
     static Queue<String> q1 = new LinkedList<String>();
     static Stack<String> s1 = new Stack<String>();
     static Stack<String> s2 = new Stack<String>();
+    static boolean dailyQuoteGiven = false;
 
 //setters and getters
     public static ArrayList<String> getTaskList(int i) {
@@ -137,8 +141,8 @@ public class habitProjectMain
                 "                                                                                                                      " +
                 "                                                                                                                      ");
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
-        System.out.println("LOADING...........");
         readFile.readDatabase();
+        readFile.readQuoteDatabase();
         start.choose();
 
 
