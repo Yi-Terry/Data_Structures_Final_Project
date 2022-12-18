@@ -25,8 +25,8 @@ public class habitProjectMain
     static ArrayList<String>list1 =new ArrayList<>();
     static ArrayList<String>list2 =new ArrayList<>();
     static ArrayList<String> taskList = new ArrayList<String>();
-    static ArrayList<String> quotes = new ArrayList<>();
-    static ArrayList<String> authorOfQuote = new ArrayList<>();
+    static LinkedList<String> quotes = new LinkedList<>();
+    static LinkedList<String> authorOfQuote = new LinkedList<>();
     Scanner kb1 = new Scanner(System.in);
     static int hardPoints = 20;
     static int mediumPoints = 10;
@@ -129,7 +129,7 @@ public class habitProjectMain
     -use stack to order the list from last to first input    *DONE*
 */
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("\n" +
                 " __          __  _                            _          _    _       _     _ _     _______             _             \n" +

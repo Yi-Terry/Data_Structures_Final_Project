@@ -1,6 +1,9 @@
 //package finalProject;
+import javax.sound.sampled.Line;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
+import java.util.Random;
 import java.util.Scanner;
 
 public class readFile extends habitProjectMain{
@@ -55,6 +58,9 @@ public class readFile extends habitProjectMain{
             System.out.println("File Not Found.");
         }
     }
+
+
+
 
 
 }

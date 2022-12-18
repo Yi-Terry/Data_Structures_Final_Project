@@ -2,10 +2,10 @@
 
 import java.util.Objects;
 import java.util.Scanner;
-//
+
 public class checkOff extends habitProjectMain {
 
-//
+
     public static void checkOffList() {
 
         Scanner kb3 = new Scanner(System.in);
@@ -22,17 +22,25 @@ public class checkOff extends habitProjectMain {
             {
                 taskList.remove(0);
                 sumPoints += pointMap.get(ans);
-                System.out.println("Adding points");
-                System.out.println(sumPoints);
+                System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
                 System.out.println("Task has been completed!");
+                System.out.println("Total points:");
+                System.out.println(sumPoints);
+                System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+
             }
 
             else if (ans.equals(taskList.get(i))) {
                 taskList.remove(i);
                 sumPoints += pointMap.get(ans);
+                System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("Task has been completed!");
                 System.out.println("Total points:");
                 System.out.println(sumPoints);
-                System.out.println("Task has been completed!");
+                System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+
 
             }
             }
