@@ -54,8 +54,11 @@ public class createNewTasks extends habitProjectMain{
     {
         if(taskList.size() == 0){
             System.out.println("No Tasks Found.");
-        }else {
-            for (String s : taskList) {
+        }
+       else 
+        {
+            for (String s : taskList) 
+            {
                 System.out.println("Task Name: " + s);
                 System.out.println("Point Worth: " + pointMap.get(s));
                 System.out.println("");
