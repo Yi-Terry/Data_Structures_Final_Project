@@ -1,10 +1,13 @@
 //package finalProject;
-import javax.sound.sampled.Line;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.RandomAccessFile;
-import java.util.Random;
 import java.util.Scanner;
+
+
+/**
+ * reading data from the data file
+ */
 
 public class readFile extends habitProjectMain{
     public static void readDatabase(){
@@ -33,6 +36,11 @@ public class readFile extends habitProjectMain{
         }
 
     }
+
+    /**
+     * accesses the quotes from a database
+     * prints a quote from database
+     */
 
     public static void readQuoteDatabase(){
         String fileName = "quotes.csv";

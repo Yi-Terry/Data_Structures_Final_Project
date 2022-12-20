@@ -1,10 +1,14 @@
 //package finalProject;
 
-import java.util.Objects;
+
 import java.util.Scanner;
 
 public class checkOff extends habitProjectMain {
 
+    /**
+     * Allows the user to check off tasks that they have completed
+     * Adds points to user total after task is completed
+     */
 
     public static void checkOffList() {
 

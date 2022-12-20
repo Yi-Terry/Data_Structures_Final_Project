@@ -1,12 +1,21 @@
 import java.util.Scanner;
 
 public class randomize extends habitProjectMain{
+
+    /**
+     * Checks if the user is given a quote
+     */
+
     public static void checkIfUserIsGivenQuote(){
         if(!dailyQuoteGiven){
             randomize.giveUserQuote();
             dailyQuoteGiven = true;
         }
     }
+
+    /**
+     * Recommends the user a random task from the database
+     */
 
    public static void giveUserTask(){
         int max = databaseList.size();
@@ -39,7 +48,11 @@ public class randomize extends habitProjectMain{
        }
     }
 
-     public static void giveUserQuote(){
+    /**
+     * Gives the user an inspirational quote
+     */
+
+    public static void giveUserQuote(){
          int max = quotes.size();
          int min = 0;
          int range = max - min + 1;

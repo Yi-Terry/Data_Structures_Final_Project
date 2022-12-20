@@ -1,11 +1,14 @@
 //package finalProject;
 
-import java.util.*;
+
 import java.util.Scanner;
 
 public class createNewTasks extends habitProjectMain{
 
-//Method used to create task
+    /**
+     *   Method used to create task
+     */
+
    public static void taskCreator(){
 
         Scanner kb2 = new Scanner(System.in);
@@ -15,16 +18,20 @@ public class createNewTasks extends habitProjectMain{
 
         for(int i = 1; i <= input; i++)
         {
-            //Asks user to enter a task
-            //adds to the arraylist
+            /*
+             * Asks user to enter a task
+             *   adds to the arraylist
+             */
             System.out.println("Please enter in task "+i);
                 String task = kb2.nextLine();
                 taskList.add(task);
                 q1.add(task);
                s1.push(task);
-////////////////////////////////////////////////////////////////////////////////
 
-                //Asks for the difficultly of the task
+
+            /**
+             * Asks for the difficultly of the task
+             */
             System.out.println("How difficult is this task? \n 1. Easy \n 2. Medium \n 3. Hard");
                     int difInput = Integer.parseInt(kb2.nextLine());
             switch (difInput) {
@@ -44,12 +51,12 @@ public class createNewTasks extends habitProjectMain{
             }
 
         }
-
-
         System.out.println(taskList);
     }
 
-    //This method allows the user to see the amount of points each of their tasks are based on their difficulty
+    /**
+     *  This method allows the user to see the amount of points each of their tasks are based on their difficulty
+     */
     public static void taskNameAndPoints()
     {
         if(taskList.size() == 0){

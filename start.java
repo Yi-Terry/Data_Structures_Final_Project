@@ -3,11 +3,10 @@ import java.util.Scanner;
 
 //start of the task program
 public class start extends habitProjectMain{
-//
-    //
+
     public static void choose() {
         Scanner kb = new Scanner(System.in);
-        //Get random task from database. Use math.random?
+        //Get random task from database.
         randomize.checkIfUserIsGivenQuote();
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("What would you like to do?");
@@ -60,7 +59,7 @@ public class start extends habitProjectMain{
 
                     if(input == 1) {
                         if(bt.countNodes()<1) {
-//                            readFile.readDatabase();
+
                             for (String s : databaseList) {
                                 bt.insert(s);
                             }
@@ -92,10 +91,9 @@ public class start extends habitProjectMain{
                     else{
                         System.out.println("Error. Please enter appropriate number");
                     }
-
-
-
                     break;
+
+                    //checks current level of character
                 case 8:
                     pointStatus.currentLevel();
                     break;
@@ -106,10 +104,9 @@ public class start extends habitProjectMain{
             }
 
             //Asks if you are done with the program
-
-                System.out.println("Are you finished with the program? Write Yes or No.");
+                System.out.println("Are you finished with the program? Y or N?");
                 String continueLoop = kb.next();
-                if (continueLoop.equalsIgnoreCase("Yes")) {
+                if (continueLoop.equalsIgnoreCase("Y")) {
                     run = true;
                     System.out.println("Ending Program.");
 

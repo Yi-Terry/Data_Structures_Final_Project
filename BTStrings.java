@@ -2,6 +2,10 @@
 public class BTStrings {
     private BtNode rootNode;
 
+    /**
+     * Binary tree
+     */
+
     public void BtStrings(){
         rootNode=null;
     }

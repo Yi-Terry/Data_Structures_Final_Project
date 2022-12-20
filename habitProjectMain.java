@@ -1,24 +1,15 @@
 //package finalProject;
 
-import java.lang.reflect.Array;
+
 import java.util.*;
 import java.util.Scanner;
 /**
  * @author Terry, Josh, John
  * @date 11/19/2022
  * @version 1.01
- *
  */
 
-    /*
-    THINGS TO FIX
-    -If the user enters a number other than 1,2, or 3 for the task, it will return null and break the program if the
-    user tries to check it off
-    -When choosing cases 5 and 6 and the habit list is empty, the program will say it will print out the list but then
-    prints nothing
-    -If the user decides to check their points but havent checked off anything, it will say they have 1 point
-    -Points do not do anything yet
-*/
+
 public class habitProjectMain
 {
     //Arraylist(task list), points
@@ -121,13 +112,7 @@ public class habitProjectMain
         habitProjectMain.s1 = s1;
     }
 
-    /*
-    -use binary tree to recommend user new tasks to try and add into the list. Also, show the amount of points that task costs.
-    -sort recommended tasks from data file into easy-hard order.
-    -save all tasks into a file so that it can be brought back up when the program is loaded again
-    -use queue to order the lst from first to last input
-    -use stack to order the list from last to first input    *DONE*
-*/
+
 
     public static void main(String[] args)  {
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
@@ -144,8 +129,5 @@ public class habitProjectMain
         readFile.readDatabase();
         readFile.readQuoteDatabase();
         start.choose();
-
-
-        /////////////////////////////////////////////////////////
     }
 }

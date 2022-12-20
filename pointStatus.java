@@ -2,8 +2,10 @@
 
 public class pointStatus extends habitProjectMain
 {
-//
 
+    /**
+     * Returns amount of points.
+     */
     public static void currentPoints(){
 
         System.out.println("Displaying current points: \n " +
@@ -12,6 +14,9 @@ public class pointStatus extends habitProjectMain
 
     }
 
+    /**
+     * Returns current level of character.
+     */
 
     public static void currentLevel()
     {

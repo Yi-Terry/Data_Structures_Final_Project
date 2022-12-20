@@ -7,7 +7,9 @@ public class sort extends habitProjectMain {
 
     
 
-/** prints the tasks list in first to last order entered*/
+/**
+ * prints the tasks list in first to last order entered
+ */
     public static void firstLast()
     {
         while( k <= q1.size())
@@ -18,7 +20,9 @@ public class sort extends habitProjectMain {
 }
 
     }
-/** prints the task list in last to first order entered*/
+/*
+ *prints the task list in last to first order entered
+ */
     public static void lastFirst()
     {
         for(int j = s1.size(); j>0; j--)
@@ -42,6 +46,9 @@ public class sort extends habitProjectMain {
 
     }
 
+    /**
+     *Bubble sort the database
+     */
 
     public static void sortStrings(ArrayList<String> arr, int n, ArrayList<String>arr2){
         String temp;
@@ -61,6 +68,9 @@ public class sort extends habitProjectMain {
 
     }
 
+    /**
+     *Runs the sorting method
+     */
 
     public static void runStringSort(ArrayList<String> arr1, ArrayList<String>arr2, int size){
         sort.sortStrings(arr1, size,arr2);
