@@ -4,21 +4,7 @@ import java.util.ArrayList;
 
 public class sort extends habitProjectMain {
     static int k =1;
-//
-//    public static void bubbleSort(String taskList) {
-//        int n = taskList.length();
-//        int temp = 0;
-//        for(int i=0; i < n; i++){
-//            for(int j=1; j < (n-i); j++){
-//                if(taskList[j-1] > taskList[j]){
-////swap the elements!
-//                    temp = taskList[j-1];
-//                    taskList[j-1] = taskList[j];
-//                    taskList[j] = temp;
-//                }
-//            }
-//        }
-//    }
+
     
 
 /** prints the tasks list in first to last order entered*/
