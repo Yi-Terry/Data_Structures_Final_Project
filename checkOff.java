@@ -16,7 +16,7 @@ public class checkOff extends habitProjectMain {
 
         System.out.println(taskList);
 
-        System.out.println("choose a task you would like to remove.");
+        System.out.println("choose 1 task you would like to remove.");
 
         String ans = kb3.nextLine();
 
@@ -47,9 +47,16 @@ public class checkOff extends habitProjectMain {
 
 
             }
+
+            else if (ans != taskList.get(i))
+            {
+                System.out.println("This task does not exist in the list. \n" +
+                        "Please choose one that is in your list.");
+                checkOffList();
+            }
             }
 
-        if (taskList.isEmpty()) {
+            if (taskList.isEmpty()) {
             System.out.println("You have completed all of your tasks! \n" +
                     "Add more!");
 
